@@ -1,0 +1,9 @@
+[package]
+name = "base-counter"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+bio = { version = "2.2.0" } # Generic simd would be great to add...
+clap = { version = "4.5.37", features = ["derive"] }
+flate2 = "1.1.1"
