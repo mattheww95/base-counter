@@ -105,8 +105,9 @@ fn count_fq_bases(forward: PathBuf, reverse: PathBuf) -> BaseCounts {
 fn main() {
     let cli = Cli::parse();
     let counts = count_fq_bases(cli.forward, cli.reverse);
-    println!("Sample,A,T,C,G,Ambig");
-    println!("{},{}", cli.name, counts);
+    let count_sum = counts.a + counts.t + counts.c + counts.g;
+    println!("Sample,A,T,C,G,Ambig,NrBasesCGT");
+    println!("{},{},{}", cli.name, counts, count_sum);
 }
 
 
